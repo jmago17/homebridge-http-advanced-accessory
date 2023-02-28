@@ -402,6 +402,7 @@ HttpAdvancedAccessory.prototype = {
                         
                         console.log("updating " + characteristic.displayName.replace(/\s/g, '') + " with value " + value);
                         setDispatch(value, callback, characteristic);
+                        console.log(setDispatch);
                     } else {
                         // making a request and setter delay is set
                         // optimistic callback calling if we have a delay
