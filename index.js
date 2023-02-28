@@ -331,7 +331,7 @@ HttpAdvancedAccessory.prototype = {
             newService.addCharacteristic(characteristic);
         }
 
-        if (newService.testCharacteristic(Characteristic.ColorTemperature) && newService.testCharacteristic(Characteristic.Brightness)  {
+        if (newService.testCharacteristic(Characteristic.ColorTemperature) && newService.testCharacteristic(Characteristic.Brightness))  {
             this.adaptiveLightingController = new homebridge.hap.AdaptiveLightingController(homebridgeService);
         }
 
