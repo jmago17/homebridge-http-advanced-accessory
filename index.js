@@ -399,8 +399,9 @@ HttpAdvancedAccessory.prototype = {
                 setter: function(value, callback) {
                     if (this.enableSet == false || this.setterDelay === 0) {
                         // no setter delay or internal set - do it immediately 
-                        this.debugLog("updating " + characteristic.displayName.replace(/\s/g, '') + " with value " + value);
-                        setDispatch(value+140, callback, characteristic);
+                        
+                        console.log("updating " + characteristic.displayName.replace(/\s/g, '') + " with value " + value);
+                        setDispatch(value, callback, characteristic);
                     } else {
                         // making a request and setter delay is set
                         // optimistic callback calling if we have a delay
