@@ -328,6 +328,10 @@ HttpAdvancedAccessory.prototype = {
 
 			newService.addCharacteristic(characteristic);
 		}
+		
+		if (newService.brightness && newService.colorTemperature) {
+       			 this.adaptiveLightingController = new api.hap.AdaptiveLightingController(homebridgeService);
+  		}
 	
 		function makeHelper(characteristic) {
 			var timeoutID = null;
