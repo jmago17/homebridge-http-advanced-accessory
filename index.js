@@ -294,6 +294,8 @@ HttpAdvancedAccessory.prototype = {
 		var optionCounters = [];
 
 
+		 
+		
 		for (var characteristicIndex in newService.characteristics) 
 		{
 			var characteristic = newService.characteristics[characteristicIndex];
@@ -418,4 +420,12 @@ HttpAdvancedAccessory.prototype = {
 		}
 		return [informationService, newService];
 	}
+	getControllers: function () {
+      if (!this.adaptiveLightingController) {
+          return [];
+      } else {
+          return [this.adaptiveLightingController];
+      }
+    };
+	
 };
