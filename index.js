@@ -427,6 +427,6 @@ HttpAdvancedAccessory.prototype = {
         } else {
             return [this.adaptiveLightingController];
         }
-    };
+    },
 
 };
